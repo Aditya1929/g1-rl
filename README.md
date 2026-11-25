@@ -101,3 +101,8 @@ If racket error stalls near 10 cm, raise `residual_scale` (λ) to 0.2.
 - **Deploy bridge.** The robot pose in the table frame is static (from CLI arguments) and is not yet read from vision. Verify the tracker-frame axis signs on the real table. The bridge is dry-run by default; validate sim-to-sim in MuJoCo with the real SONIC controller before `--live`.
 - **Ball and racket parameters** (drag, restitution, racket mass) are nominal. Fit them on recorded bounces.
 - **Command noise.** Training uses exact commands. If real swings jitter, add SMASH Eq. 14 noise to the actor's commands.
+
+## Third-party
+`data/sonic_decoder_release.npz` is converted from NVIDIA's SONIC (GR00T-WholeBodyControl) weights.
+Licensed by NVIDIA Corporation under the NVIDIA Open Model License; see
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and [`licenses/`](licenses/).
